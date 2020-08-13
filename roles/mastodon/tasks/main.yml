@@ -86,7 +86,7 @@
   become: true
   become_method: su
   become_user: "_mastodon"
-  command: "bundle24 install --deployment --without development test"
+  command: "bundle26 install --deployment --without development test"
   args:
     chdir: /var/www/_mastodon/live
     creates: /var/www/_mastodon/live/vendor/bundle/

@@ -15,6 +15,7 @@ cd mastodon_openbsd
 cp hosts.example hosts
 ...modify hosts file. adding your instance name, etc...
 ansible-playbook site.yml
+/var/www/_mastodon/cmd_runner.sh secrets >> .env.production
 ```
 
 # Assumptions

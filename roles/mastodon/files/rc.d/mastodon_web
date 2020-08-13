@@ -3,7 +3,7 @@
 env="RAILS_ENV=production PORT=3000"
 datadir="/var/www/_mastodon/live"
 
-daemon="/usr/local/bin/bundle24"
+daemon="/usr/local/bin/bundle26"
 daemon_flags="exec puma -C ${datadir}/config/puma.rb"
 daemon_user="_mastodon"
 
@@ -14,7 +14,7 @@ rc_start() {
 	su ${daemon_user} -c "env ${env} ${daemon} ${daemon_flags}"
 }
 
-pexp="ruby24: puma:"
+pexp="ruby26: puma:"
 
 rc_reload=NO
 rc_bg=YES

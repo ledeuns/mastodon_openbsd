@@ -8,8 +8,8 @@
     state: installed
   with_items:
     - redis
-    - ruby24-redis
-    - ruby24-redis-namespace
+    - ruby26-redis
+    - ruby26-redis-namespace
 
 - name: enable redis
   service:

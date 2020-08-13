@@ -9,22 +9,22 @@
     state: installed
   with_items:
     - ImageMagick
-    - autoconf-2.69p2
+    - autoconf-2.69p3
     - automake-1.15.1
     - bwm-ng
     - ffmpeg
     - gcc
     - git
-    - gnupg-2.2.4
+    - gnupg-2.2.20
     - icu4c
     - libidn
     - node
     - protobuf
-    - ruby24-addressable
-    - ruby24-bundler
-    - ruby24-nokogiri
-    - ruby24-puma
-    - ruby24-sanitize
+    - ruby26-addressable
+    - ruby26-bundler
+    - ruby26-nokogiri
+    - ruby26-puma
+    - ruby26-sanitize
 
 - name: Make symlinks
   file:
@@ -32,8 +32,8 @@
     src: "/usr/local/bin/{{ item.src }}"
     dest: "/usr/local/bin/{{ item.dest }}"
   with_items:
-    - { src: "python2.7", dest: "python" }
-    - { src: "bundle24", dest: "bundle" }
+    - { src: "python3", dest: "python" }
+    - { src: "bundle26", dest: "bundle" }
 
 - name: Configure login.conf
   tags:
